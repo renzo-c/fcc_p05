@@ -1,0 +1,23 @@
+{
+  "name": "p05_portfoliopage",
+  "version": "1.0.0",
+  "description": "FCC 5th project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renzo-c/fcc_p05.git"
+  },
+  "author": "Renzo Navarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renzo-c/fcc_p05/issues"
+  },
+  "homepage": "https://github.com/renzo-c/fcc_p05#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.19.0"
+  }
+}
