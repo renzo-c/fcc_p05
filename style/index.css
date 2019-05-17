@@ -255,6 +255,11 @@ canvas {
 /* STOP HEADER*/
 
 /* START ABOUT */
+.services .section-heading h1::after,
+.services .section-heading h1::before {
+  background-color: var(--main-font-dark-gray);
+}
+
 #about {
   color: var(--main-font-dark-gray);
 }
@@ -826,7 +831,7 @@ input[type="submit"] {
 
 #backdrop {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -942,6 +947,56 @@ input[type="submit"] {
   .icon-container i {
     font-size: 4rem;
   }
+
+  .modal-container {
+    top: 50%;
+    width: 65vw;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  #prev-btn {
+    top: 22%;
+  }
+
+  #next-btn {
+    top: 22%;
+  }
+
+  .project-description h1 {
+    font-size: 2.4rem;
+  }
+
+  .project-description h2 {
+    font-size: 1.8rem;
+  }
+
+  #p01-wrapper,
+  #p02-wrapper,
+  #p03-wrapper,
+  #p04-wrapper,
+  #p05-wrapper,
+  #p06-wrapper {
+    height: 100%;
+  }
+  .carousel-container {
+    height: 50%;
+  }
+  .project-description {
+    height: 50%;
+    padding-top: 8rem;
+  }
+
+  .project-description #ft-list ul {
+    padding-left: 0;
+  }
+
+  #btn-prj-wrapper {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 715px) {
@@ -1015,5 +1070,84 @@ input[type="submit"] {
   .nav-link:hover,
   .nav-link .active:hover {
     color: var(--main-font-color);
+  }
+
+  .modal-container {
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  #prev-btn {
+    top: 20%;
+  }
+
+  #next-btn {
+    top: 20%;
+  }
+
+  .project-description h1 {
+    font-size: 2.4rem;
+  }
+
+  .project-description h2 {
+    font-size: 1.8rem;
+  }
+
+  #p01-wrapper,
+  #p02-wrapper,
+  #p03-wrapper,
+  #p04-wrapper,
+  #p05-wrapper,
+  #p06-wrapper {
+    position: absolute;
+  }
+  .carousel-container {
+    height: 44%;
+  }
+  .project-description {
+    height: 56%;
+    padding-top: 7rem;
+  }
+
+  .project-description p {
+    font-size: 1.4rem;
+  }
+
+  .project-description #ft-list {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+  }
+  .project-description #ft-list ul {
+    padding-left: 9rem;
+    font-size: 1.4rem;
+  }
+
+  #btn-prj-wrapper {
+    position: absolute;
+    top: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 426px) {
+  .project-description #ft-list {
+    flex-direction: row;
+    justify-content: stretch;
+    margin: 0;
+    margin-top: 1.2rem;
+  }
+  .project-description #ft-list ul {
+    padding-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .project-description #ft-list {
+    margin: 0;
+    margin-top: 2.5rem;
   }
 }
