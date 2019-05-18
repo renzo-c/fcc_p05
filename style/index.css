@@ -1185,19 +1185,22 @@ input[type="submit"] {
   }
 
   .car-container {
-    width: 41rem;
-    height: 30.5rem;
+    /* width: 41rem; */
+    height: 25.8rem;
+    background-image: url("/assets/images/carousel/p01/320/p01_01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media only screen and (min-width: 376px) and (max-width: 426px) {
-  #mod-p01 {
-    height: 100%;
-    width: 100%;
-  }
-  .car-container {
+  /* #mod-p01 {
+    height: 520rem;
+    width: 35rem;
+  } */
+  /* .car-container {
     width: 42.7rem;
     height: 31.7rem;
-  }
+  } */
 }
 
 @media only screen and (min-width: 426px) and (max-width: 769px) {
