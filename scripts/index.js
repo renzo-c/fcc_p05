@@ -100,7 +100,7 @@ $(document).ready(function() {
 
     /*  open modal */
     prj = `#mod-p0${prj.substr(prj.length - 1)}`;
-    $(prj).css({ display: "block" });
+    $(prj).css({ display: "initial" });
 
     /************** test ***************/
 
