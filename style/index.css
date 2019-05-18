@@ -1167,45 +1167,56 @@ input[type="submit"] {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
-  /* height: 70rem;
-  width: 70rem; */
   max-height: 100%;
   max-width: 100%;
 }
 .car-container {
   background: red;
+  background-image: url("/assets/images/carousel/p01/320/p01_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .desc-container {
   background: blue;
 }
-@media only screen and (min-width: 320px) and (max-width: 426px) {
+@media only screen and (max-width: 320px) {
   #mod-p01 {
-    height: 100%;
+    min-width: 32rem;
+    min-height: 64.6rem;
+  }
+
+  .car-container {
     width: 100%;
   }
+}
+@media only screen and (min-width: 320px) and (max-width: 426px) {
+  #mod-p01 {
+    width: 100%;
+    height: 100%;
+  }
 
   .car-container {
-    /* width: 41rem; */
-    height: 25.8rem;
-    background-image: url("/assets/images/carousel/p01/320/p01_01.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 26.8rem;
   }
 }
-@media only screen and (min-width: 376px) and (max-width: 426px) {
-  /* #mod-p01 {
-    height: 520rem;
-    width: 35rem;
-  } */
-  /* .car-container {
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+  #mod-p01 {
     width: 42.7rem;
-    height: 31.7rem;
-  } */
+    height: 95%;
+  }
+  .car-container {
+    height: 26.8rem;
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 426px) and (max-width: 769px) {
+@media only screen and (min-width: 1024px) {
+  #mod-p01 {
+    width: 70rem;
+    height: 95%;
+  }
   .car-container {
-    width: 50rem;
-    height: 37.1rem;
+    width: 100%;
+    height: 44rem;
   }
 }
