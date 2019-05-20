@@ -682,12 +682,6 @@ input[type="submit"] {
   animation: fadeIn 2s;
 }
 
-#p01-wrapper {
-  position: static;
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
-}
 .carousel-container {
   width: 100%;
   margin: auto;
@@ -708,7 +702,6 @@ input[type="submit"] {
 
 #prev-btn {
   position: absolute;
-  top: 40%;
   z-index: 10;
   left: 5%;
   font-size: 3rem;
@@ -716,11 +709,12 @@ input[type="submit"] {
   cursor: pointer;
   padding: 1rem;
   background: rgba(128, 128, 128, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #next-btn {
   position: absolute;
-  top: 40%;
   z-index: 10;
   right: 5%;
   font-size: 3rem;
@@ -728,6 +722,8 @@ input[type="submit"] {
   cursor: pointer;
   padding: 1rem;
   background: rgba(128, 128, 128, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .project-description {
@@ -947,56 +943,6 @@ input[type="submit"] {
   .icon-container i {
     font-size: 4rem;
   }
-
-  .modal-container {
-    top: 50%;
-    width: 65vw;
-    height: 100vh;
-    z-index: 1000;
-  }
-
-  #prev-btn {
-    top: 22%;
-  }
-
-  #next-btn {
-    top: 22%;
-  }
-
-  .project-description h1 {
-    font-size: 2.4rem;
-  }
-
-  .project-description h2 {
-    font-size: 1.8rem;
-  }
-
-  #p01-wrapper,
-  #p02-wrapper,
-  #p03-wrapper,
-  #p04-wrapper,
-  #p05-wrapper,
-  #p06-wrapper {
-    height: 100%;
-  }
-  .carousel-container {
-    height: 50%;
-  }
-  .project-description {
-    height: 50%;
-    padding-top: 8rem;
-  }
-
-  .project-description #ft-list ul {
-    padding-left: 0;
-  }
-
-  #btn-prj-wrapper {
-    position: absolute;
-    top: 1.5rem;
-    left: 0;
-    width: 100%;
-  }
 }
 
 @media screen and (max-width: 715px) {
@@ -1071,97 +1017,11 @@ input[type="submit"] {
   .nav-link .active:hover {
     color: var(--main-font-color);
   }
-
-  .modal-container {
-    top: 50%;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1000;
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  #prev-btn {
-    top: 20%;
-  }
-
-  #next-btn {
-    top: 20%;
-  }
-
-  .project-description h1 {
-    font-size: 2.4rem;
-  }
-
-  .project-description h2 {
-    font-size: 1.8rem;
-  }
-
-  #p01-wrapper,
-  #p02-wrapper,
-  #p03-wrapper,
-  #p04-wrapper,
-  #p05-wrapper,
-  #p06-wrapper {
-    position: absolute;
-  }
-  .carousel-container {
-    height: 44%;
-  }
-  .project-description {
-    height: 56%;
-    padding-top: 7rem;
-  }
-
-  .project-description p {
-    font-size: 1.4rem;
-  }
-
-  .project-description #ft-list {
-    flex-direction: column;
-    align-items: stretch;
-    margin: 0;
-  }
-  .project-description #ft-list ul {
-    padding-left: 9rem;
-    font-size: 1.4rem;
-  }
-
-  #btn-prj-wrapper {
-    position: absolute;
-    top: 0.9rem;
-  }
-}
-
-@media only screen and (min-width: 375px) and (max-width: 426px) {
-  .project-description #ft-list {
-    flex-direction: row;
-    justify-content: stretch;
-    margin: 0;
-    margin-top: 1.2rem;
-  }
-  .project-description #ft-list ul {
-    padding-left: 1rem;
-  }
-}
-
-@media only screen and (max-width: 321px) {
-  .project-description #ft-list {
-    margin: 0;
-    margin-top: 2.5rem;
-  }
-}
-
-@media only screen and (min-width: 1100px) {
-  .modal-container {
-    top: 40%;
-  }
 }
 
 /* test */
-#mod-p01 {
+.mod-container {
   display: none;
-  background: gray;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1171,18 +1031,53 @@ input[type="submit"] {
   max-width: 100%;
 }
 .car-container {
+  position: relative;
   background: red;
-  background-image: url("/assets/images/carousel/p01/320/p01_01.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  border-bottom: 5px solid black;
+  overflow: hidden;
 }
+
+.car-slide {
+  display: flex;
+  width: 100%;
+}
+
+.car-slide img {
+  width: 100%;
+  height: 100%;
+}
+
 .desc-container {
-  background: blue;
+  position: absolute;
+  padding: 2rem 2rem 2rem 2rem;
+  color: black;
+  background-color: white;
 }
+
+.desc-container h1 {
+  font-size: 2.4rem;
+}
+
+.desc-container h2 {
+  font-size: 1.8rem;
+  color: rgba(128, 128, 128, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.desc-container p {
+  font-size: 1.5rem;
+}
+
+#btn-prj-wrapper {
+  top: 1rem;
+  width: 100%;
+}
+
 @media only screen and (max-width: 320px) {
-  #mod-p01 {
+  .mod-container {
     min-width: 32rem;
     min-height: 64.6rem;
+    width: 100%;
   }
 
   .car-container {
@@ -1190,19 +1085,33 @@ input[type="submit"] {
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 426px) {
-  #mod-p01 {
+  .mod-container {
     width: 100%;
     height: 100%;
+    top: 55%;
   }
 
   .car-container {
     height: 26.8rem;
   }
+
+  .modal-close {
+    font-size: 23px;
+    padding: 0 0.5rem;
+  }
 }
+
+@media only screen and (min-width: 425px) and (max-width: 769px) {
+  .modal-close {
+    font-size: 23px;
+    padding: 0 0.5rem;
+  }
+}
+
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
-  #mod-p01 {
+  .mod-container {
     width: 42.7rem;
-    height: 95%;
+    height: 96%;
   }
   .car-container {
     height: 26.8rem;
@@ -1211,12 +1120,19 @@ input[type="submit"] {
 }
 
 @media only screen and (min-width: 1024px) {
-  #mod-p01 {
-    width: 70rem;
-    height: 95%;
+  .mod-container {
+    width: 60rem;
+    height: 96%;
   }
   .car-container {
     width: 100%;
-    height: 44rem;
+    height: 37.7rem;
+  }
+  .desc-container {
+    height: 25.5rem;
+  }
+  #desc-p03.desc-container {
+    height: 28rem;
   }
 }
+/* test */
