@@ -85,10 +85,10 @@ $(document).ready(function() {
   });
   /* END MENU FOR MOBILE */
 
+  /* reviewed*/
   /* START MODAL */
   var project = "";
   $(".link-mod").on("click", function() {
-    /************** test ***************/
     var project = $(this).attr("id");
     const backdropHeight = $(document).height();
 
@@ -98,7 +98,10 @@ $(document).ready(function() {
 
     /*  open modal */
     project = `#mod-p0${project.substr(project.length - 1)}`;
-    $(project).css({ display: "initial" });
+    $(project)
+      .css({ display: "initial" })
+      .hide()
+      .fadeIn();
 
     /* Carousel Slide  - Variables*/
     const carouselSlide = document.querySelector(`${project} .car-slide`);
@@ -163,8 +166,6 @@ $(document).ready(function() {
         $(`#backdrop`).fadeOut("slow");
       }
     });
-
-    /************** test ***************/
   });
 });
 

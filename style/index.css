@@ -1131,8 +1131,16 @@ input[type="submit"] {
   .desc-container {
     height: 25.5rem;
   }
-  #desc-p03.desc-container {
+  #desc-p03.desc-container,
+  #desc-p04.desc-container,
+  #desc-p05.desc-container {
     height: 28rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  #desc-p05.desc-container,
+  #desc-p04.desc-container {
+    height: 25.5rem;
   }
 }
 /* test */
