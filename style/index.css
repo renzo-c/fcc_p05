@@ -29,6 +29,7 @@ html {
   --main-btn-hover-color: #b33910;
   --contact-bg-input: #1b2833;
 }
+
 a {
   text-decoration: none;
   color: var(--main-white);
@@ -175,10 +176,12 @@ section {
 /* START HEADER*/
 #navbar {
   width: 100%;
-  /* z-index: 2; */
+  z-index: 2;
   background-color: var(--nav-bg-color);
   border-bottom: 3px solid var(--secondary-font-color);
   order: 2;
+  position: absolute;
+  bottom: 0;
 }
 #navbar .nav-list {
   padding-left: 10rem;
@@ -211,9 +214,13 @@ header {
   flex-direction: column;
   width: 100%;
   background: var(--header-bg-color);
+  height: 100vh;
 }
 canvas {
-  height: 100vh;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 #welcome-section {
   position: absolute;
@@ -416,7 +423,6 @@ canvas {
 .apollo {
   width: 40%;
 }
-
 /* END ABOUT*/
 
 /* START SKILLS */
@@ -972,6 +978,7 @@ input[type="submit"] {
     transform: scale(1);
     opacity: 1;
     z-index: 10;
+    position: fixed !important;
   }
   #navbar .nav-list {
     position: relative;

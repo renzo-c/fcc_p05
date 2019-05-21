@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build a Personal Portfolio Webpage</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta
       name="description"
       content="FCC 5th project - Build a Personal Portfolio Webpage"
@@ -31,7 +32,7 @@
   </head>
   <body>
     <header id="particles-js">
-      <div id="welcome-section">
+      <div id="welcome-section" data-aos="zoom-in">
         <h1>Hello, I'm <span>Renzo Navarro</span></h1>
         <h6>I'm a full-stack software developer</h6>
         <div class="btn-container">
@@ -70,7 +71,7 @@
         </div>
 
         <div id="about-subcontainer">
-          <div class="about-details">
+          <div class="about-details" data-aos="fade-down" data-aos-delay="300">
             <div class="profile-img">
               <img src="/assets/images/about.png" />
             </div>
@@ -112,7 +113,7 @@
               </ul>
             </div>
           </div>
-          <div class="experience-bar">
+          <div class="experience-bar" data-aos="fade-up" data-aos-delay="600">
             <div class="container-bar">
               <p>HTML</p>
               <div class="skills">
@@ -181,7 +182,7 @@
           <h6>What I can do for you</h6>
         </div>
         <div class="my-skills">
-          <div class="skill">
+          <div class="skill" data-aos="fade-in" data-aos-delay="300">
             <div class="icon-container">
               <i class="fas fa-layer-group"></i>
             </div>
@@ -190,7 +191,7 @@
               Single page design to favor speed and matches on search engines.
             </p>
           </div>
-          <div class="skill">
+          <div class="skill" data-aos="fade-in" data-aos-delay="600">
             <div class="icon-container">
               <i class="fas fa-code"></i>
             </div>
@@ -199,7 +200,7 @@
               Minimalist and responsive layouts with intuitive navigation.
             </p>
           </div>
-          <div class="skill">
+          <div class="skill" data-aos="fade-in" data-aos-delay="900">
             <div class="icon-container">
               <i class="fas fa-cogs"></i>
             </div>
@@ -219,7 +220,7 @@
           <h6>View some of my recent work</h6>
         </div>
         <div class="gallery">
-          <div id="p1" class="box">
+          <div id="p1" class="box" data-aos="flip-right">
             <div class="img-box">
               <img src="/assets/images/portfolio/pf-p01.png" alt="" />
             </div>
@@ -230,7 +231,7 @@
               >
             </div>
           </div>
-          <div id="p2" class="box">
+          <div id="p2" class="box" data-aos="fade-up">
             <div class="img-box">
               <img src="/assets/images/portfolio/pf-p02.png" alt="" />
             </div>
@@ -241,7 +242,7 @@
               >
             </div>
           </div>
-          <div id="p3" class="box">
+          <div id="p3" class="box" data-aos="flip-left">
             <div class="img-box">
               <img src="/assets/images/portfolio/pf-p03.png" alt="" />
             </div>
@@ -252,7 +253,7 @@
               >
             </div>
           </div>
-          <div id="p4" class="box">
+          <div id="p4" class="box" data-aos="fade-up-right">
             <div class="img-box">
               <img src="/assets/images/portfolio/pf-p04.png" alt="" />
             </div>
@@ -263,7 +264,7 @@
               >
             </div>
           </div>
-          <div id="p5" class="box">
+          <div id="p5" class="box" data-aos="fade-down">
             <div class="img-box">
               <img src="/assets/images/portfolio/pf-p05.png" alt="" />
             </div>
@@ -274,7 +275,7 @@
               >
             </div>
           </div>
-          <div id="p6" class="box">
+          <div id="p6" class="box" data-aos="flip-left">
             <div class="img-box">
               <img src="/assets/images/background-image.png" alt="" />
             </div>
@@ -693,7 +694,7 @@
           <h1>Contact</h1>
           <h6>Let's work together</h6>
         </div>
-        <form action="">
+        <form action="" data-aos="fade-up" data-aos-delay="300">
           <label for="name">Name:</label>
           <input
             type="text"
@@ -730,6 +731,7 @@
       <p>&copy; 2019 Renzo Navarro</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script
       type="text/javascript"
       src="/assets/animations/particles.min.js"
