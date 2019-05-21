@@ -97,16 +97,16 @@ $(document).ready(function() {
     $("#backdrop").fadeIn(500);
 
     /*  open modal */
-    project = `#mod-p0${project.substr(project.length - 1)}`;
+    project = `#modal-p0${project.substr(project.length - 1)}`;
     $(project)
       .css({ display: "initial" })
       .hide()
       .fadeIn();
 
     /* Carousel Slide  - Variables*/
-    const carouselSlide = document.querySelector(`${project} .car-slide`);
+    const carouselSlide = document.querySelector(`${project} .carousel-slide`);
     const carouselImages = document.querySelectorAll(
-      `${project} .car-slide img`
+      `${project} .carousel-slide img`
     );
 
     const nextBtn = document.querySelector(`${project} #next-btn`);
@@ -160,7 +160,7 @@ $(document).ready(function() {
 
     /* Close modal by clicking anywhere but the modal */
     $(document).on("click", function(event) {
-      if (!$(event.target).closest(".mod-container,.link-mod").length) {
+      if (!$(event.target).closest(".modal-container,.link-mod").length) {
         $(`${project}`).fadeOut(500);
         $("body").css({ overflow: "visible" });
         $(`#backdrop`).fadeOut("slow");
