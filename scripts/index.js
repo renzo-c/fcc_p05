@@ -44,11 +44,21 @@ particlesJS("particles-js", {
 /* ---- End particles.js  ---- */
 
 $(document).ready(function() {
-  var viewportHeight = jQuery("canvas").height();
+  var viewportHeight = $(window).height();
   var viewportWidth = $(window).width();
+  $("header").css({ height: viewportHeight });
 
+  /* changing AOS effect to avoid extra margin in small screens */
+  if (viewportWidth >= 715) {
+    $(".about-details").attr("data-aos", "fade-right");
+    $(".experience-bar").attr("data-aos", "fade-left");
+  }
+
+  /* hold navbar to the top */
   $(window).scroll(function() {
     if ($(window).scrollTop() > viewportHeight && viewportWidth > 715) {
+      console.log("viewportHeight", viewportHeight);
+      console.log("viewportwidth", viewportWidth);
       $("nav#navbar").removeAttr("id");
       $("nav").addClass("sticky-nav");
     } else {
@@ -166,6 +176,10 @@ $(document).ready(function() {
         $(`#backdrop`).fadeOut("slow");
       }
     });
+  });
+  AOS.init({
+    easing: "ease",
+    duration: 1800
   });
 });
 
