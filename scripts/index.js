@@ -57,8 +57,6 @@ $(document).ready(function() {
   /* hold navbar to the top */
   $(window).scroll(function() {
     if ($(window).scrollTop() > viewportHeight && viewportWidth > 715) {
-      console.log("viewportHeight", viewportHeight);
-      console.log("viewportwidth", viewportWidth);
       $("nav#navbar").removeAttr("id");
       $("nav").addClass("sticky-nav");
     } else {
@@ -95,7 +93,6 @@ $(document).ready(function() {
   });
   /* END MENU FOR MOBILE */
 
-  /* reviewed*/
   /* START MODAL */
   var project = "";
   $(".link-mod").on("click", function() {
@@ -177,10 +174,19 @@ $(document).ready(function() {
       }
     });
   });
+  /* END MODAL */
+
+  /* SCROLLING ANIMATION */
   AOS.init({
     easing: "ease",
     duration: 1800
   });
-});
 
-/* END MODAL */
+  /* RESET INPUTS WHEN SUBMIT*/
+  // $(".submit").on("click", () => {
+  //   console.log("I am in");
+  //   $("#name").val("");
+  //   $("#email").val("");
+  //   $("#subject").val("");
+  // });
+});
