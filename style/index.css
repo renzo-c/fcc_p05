@@ -309,6 +309,7 @@ canvas {
 
 .about-details {
   margin-right: 5rem;
+  flex: 1;
 }
 .profile-img {
   display: flex;
@@ -365,6 +366,7 @@ canvas {
   width: 100%;
   color: var(--main-white);
   font-size: 1.8rem;
+  flex: 1;
 }
 .container-bar {
   display: flex;
@@ -400,28 +402,28 @@ canvas {
   color: var(--main-font-dark-gray);
 }
 .html {
-  width: 80%;
+  width: 40%;
 }
 .css {
-  width: 70%;
+  width: 50%;
 }
 .javascript {
-  width: 70%;
+  width: 40%;
 }
 .react {
-  width: 80%;
+  width: 45%;
 }
 .nodejs {
-  width: 50%;
+  width: 30%;
 }
 .sequelize {
-  width: 40%;
+  width: 25%;
 }
 .graphql {
-  width: 50%;
+  width: 30%;
 }
 .apollo {
-  width: 40%;
+  width: 20%;
 }
 /* END ABOUT*/
 
@@ -862,10 +864,6 @@ input[type="submit"] {
   .nav-link {
     font-size: 1.2rem;
   }
-  .about-details {
-    flex: 1;
-  }
-
   .about-details p {
     width: 87%;
     margin: auto;
