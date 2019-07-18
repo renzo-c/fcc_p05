@@ -321,6 +321,9 @@ canvas {
   margin: 2.5rem 0 1rem;
   text-align: center;
 }
+#who-am-i > p {
+  text-align: justify;
+}
 .social-media {
   margin-top: 4rem;
 }
